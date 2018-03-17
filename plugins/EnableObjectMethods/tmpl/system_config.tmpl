@@ -1,0 +1,40 @@
+<mt:if name="enable_object_methods_loop">
+<mt:loop name="enable_object_methods_loop">
+<div class="form-group">
+  <label>
+    <mt:var name="type" escape="html">
+  </label>
+  <div class="form-group">
+    <div class="form-check form-check-inline">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" id="enable-object-methods-<mt:var name="type" escape="html">-delete" name="enable_object_methods" class="custom-control-input" value="<mt:var name="type" escape="html">:delete"<mt:if name="delete"> checked="checked"</mt:if><mt:if name="disabled"> disabled="disabled"</mt:if>>
+        <label for="enable-object-methods-<mt:var name="type" escape="html">-delete" class="custom-control-label">
+          delete
+        </label>
+      </div>
+    </div>
+    <div class="form-check form-check-inline">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" id="enable-object-methods-<mt:var name="type" escape="html">-edit" name="enable_object_methods" class="custom-control-input" value="<mt:var name="type" escape="html">:edit"<mt:if name="edit"> checked="checked"</mt:if><mt:if name="disabled"> disabled="disabled"</mt:if>>
+        <label for="enable-object-methods-<mt:var name="type" escape="html">-edit" class="custom-control-label">
+          edit
+        <label>
+      </div>
+    </div>
+    <div class="form-check form-check-inline">
+      <div class="custom-control custom-checkbox">
+        <input  type="checkbox" id="enable-object-methods-<mt:var name="type" escape="html">-save" name="enable_object_methods" class="custom-control-input" value="<mt:var name="type" escape="html">:save"<mt:if name="save"> checked="checked"</mt:if><mt:if name="disabled"> disabled="disabled"</mt:if>>
+        <label for="enable-object-methods-<mt:var name="type" escape="html">-save" class="custom-control-label">
+          save
+        <label>
+      </div>
+    </div>
+  </div>
+</div>
+</mt:loop>
+<mt:else>
+<div class="my-4">
+  <__trans phrase="No object type that does not have enable_object_methods and disable_object_methods.">
+</div>
+</mt:if>
+

@@ -1,0 +1,19 @@
+name: EnableObjectMethods
+version: 0.01
+description: <__trans phrase="Manage enable_object_methods registry on admin screen for old plugins.">
+plugin_link: https://github.com/masiuchi/mt-plugin-enable-object-methods
+author_name: Masahiro IUCHI
+author_link: https://github.com/masiuchi
+
+applications:
+  cms:
+    callbacks:
+      init_app: $EnableObjectMethods::MT::Plugin::EnableObjectMethods::Callback::init_app
+      save_config_filter.EnableObjectMethods: $EnableObjectMethods::MT::Plugin::EnableObjectMethods::Callback::save_config_filter
+
+settings:
+  enable_object_methods:
+
+system_config_template:
+  code: $EnableObjectMethods::MT::Plugin::EnableObjectMethods::Callback::system_config_tmpl
+
